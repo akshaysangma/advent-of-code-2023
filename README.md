@@ -1,5 +1,5 @@
 # Advent of Code 2023 Solutions
-This repository contains my solutions to the challenges from [Advent of Code 2023](https://adventofcode.com/2023).
+This repository contains my solutions to the challenges from [Advent of Code 2023](https://adventofcode.com/2023) in GO.
 
 # Run the Solutions
 1. Navigate to the day specific directory:

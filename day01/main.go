@@ -28,14 +28,14 @@ func main() {
 }
 
 func partOne() string {
-	input1, err := os.Open("input1.txt")
+	input, err := os.Open("input.txt")
 	if err != nil {
 		return fmt.Sprintf("unable to read input file : %s", err)
 	}
-	defer input1.Close()
+	defer input.Close()
 
 	re := regexp.MustCompile(`\d`)
-	scanner := bufio.NewScanner(input1)
+	scanner := bufio.NewScanner(input)
 	var total int
 
 	for scanner.Scan() {
@@ -54,14 +54,14 @@ func partOne() string {
 // sadly (?=(one|two|three|four|five|six|seven|eight|nine|zero|\d)) povitive lookahead is not supported
 // in go. Hence unable to handle overlapping kinds like oneight (1,8). Refer https://github.com/google/re2/wiki/Syntax
 func partTwo() string {
-	input1, err := os.Open("input1.txt")
+	input, err := os.Open("input.txt")
 	if err != nil {
 		return fmt.Sprintf("unable to read input file : %s", err)
 	}
-	defer input1.Close()
+	defer input.Close()
 
 	re := regexp.MustCompile(`\d`)
-	scanner := bufio.NewScanner(input1)
+	scanner := bufio.NewScanner(input)
 	var total int
 
 	for scanner.Scan() {
