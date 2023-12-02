@@ -32,6 +32,7 @@ func partOne() string {
 	if err != nil {
 		return fmt.Sprintf("unable to read input file : %s", err)
 	}
+	defer input1.Close()
 
 	re := regexp.MustCompile(`\d`)
 	scanner := bufio.NewScanner(input1)
@@ -57,6 +58,8 @@ func partTwo() string {
 	if err != nil {
 		return fmt.Sprintf("unable to read input file : %s", err)
 	}
+	defer input1.Close()
+
 	re := regexp.MustCompile(`\d`)
 	scanner := bufio.NewScanner(input1)
 	var total int
