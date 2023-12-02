@@ -79,8 +79,8 @@ func gamePossible(game string, maxRed int, maxGreen int, maxBlue int) bool {
 	return true
 }
 
-// gamePossible check the possiblity of the game based on the
-// number of cubes vs cubes showed in a game.
+// minSetPower finds the required number for each color
+// and returns its multiplication
 func minSetPower(game string) int {
 	minRed := 0
 	minGreen := 0
